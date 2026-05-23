@@ -26,3 +26,9 @@
 - **Decisions:** .env מוחרג מ-git (מופיע ב-.gitignore); .env.example ב-git כתבנית.
 - **Notes / Caveats:** אף מפתח אינו ממולא בפועל עדיין — כולם placeholder.
 - **Related:** [[gitignore]], [[team-personas]], [[agents-directory]]
+
+### 2026-05-23 — חן משתמשת ב-WebSearch/WebFetch מובנים, לא ב-Tavily/Brave [shipped]
+- **What was done:** הובהרה ההחלטה על כלי החיפוש של חן: היא משתמשת ב-WebSearch ו-WebFetch המובנים של Claude Code — **לא** ב-Tavily (`TAVILY_API_KEY`) ולא ב-Brave (`BRAVE_SEARCH_API_KEY`). מפתחות אלו נשארים ב-`.env.example` כ-comments (מוערים) לעתיד.
+- **Decisions:** כלי Claude Code המובנים מספיקים לצרכים הנוכחיים. אין צורך ב-API key נוסף לחן. `.env.example` **לא** עודכן — המפתחות נשארים כ-comments למקרה שיעבירו את חן ל-Tavily/Brave בעתיד.
+- **Notes / Caveats:** אם בעתיד יידרש נפח גדול / rate limits גבוהים, שווה לשקול Tavily — המפתח כבר מתוכנן ב-.env.example.
+- **Related:** [[chen-agent]], [[agents-directory]]

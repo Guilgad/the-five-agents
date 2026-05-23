@@ -11,11 +11,10 @@
 |---|---|---|---|
 | `yael.md` | יעל | כותבת תוכן — שכתוב/עריכה/תרגום/סיכום | ✅ shipped (2026-05-23) — ראו [[yael-agent]] |
 | `yuval.md` | יובל | מעצב תמונות — יצירת PNG דרך OpenAI Images API | ✅ shipped (2026-05-23) — ראו [[yuval-agent]] |
-| `chen.md` | חן | חוקרת — מידע, מקורות, עובדות | ⏳ TODO |
+| `chen.md` | חן | חוקרת — חיפוש ברשת, סינון מקורות, פלט ל-Content/ | ✅ shipped (2026-05-23) — ראו [[chen-agent]] |
 
 ## Open Questions
-- האם הפורמט שבחרנו ליעל (frontmatter + system prompt בעברית) יתאים גם ליובל וחן? כנראה כן, אבל יובל יצטרך תיאור של יכולות ויזואליות וייתכן שדרושים tools נוספים.
-- האם יש מצב שבו ראובן מפעיל יותר מסוכן אחד למשימה (pipeline)? לבחון כשיובל וחן יהיו זמינים.
+- האם יש מצב שבו ראובן מפעיל את כל שלושת הסוכנים יחד (חן → יעל → יובל) אוטומטית? Pipeline חדש הוגדר ב-CLAUDE.md — יבחן בשימוש אמיתי.
 
 ## Session Log
 
@@ -30,6 +29,12 @@
 - **Decisions:** הפורמט שאומץ ליעל יוכל לשמש תבנית ליובל וחן. ההחלטה התפעולית של graceful degradation (במקום עצירה כשחסרים קבצי תמיכה) תיבחן גם בסוכנים הבאים.
 - **Notes / Caveats:** תיק נושא מפורט נפתח ב-[[yael-agent]] — עדכוני יעל ממשיכים שם, לא כאן.
 - **Related:** [[yael-agent]], [[claude-md]]
+
+### 2026-05-23 — הסוכנת השלישית (חן) הוגדרה [shipped]
+- **What was done:** נוצר `.claude/agents/chen.md` — sub-agent עם 7 כלים (`WebSearch, WebFetch, Read, Write, Edit, Glob, Grep`). Flow של 8 שלבים כולל בדיקת זיכרון (Grep ב-`chen/Memory/searches.md`) לפני כל חיפוש ורישום אחריו. נוצרו `chen/Memory/searches.md` ו-`.gitkeep`. עודכן CLAUDE.md: ניתוב חן, pipeline חדש (חן → יעל → יובל), מבנה תיקיות, הוסרה שורת TODO. הצוות מלא — שלושת הסוכנים פעילים.
+- **Decisions:** חן משתמשת ב-WebSearch/WebFetch מובנים של Claude Code (לא Tavily/Brave). דפוס Graceful Degradation עקבי עם יעל ויובל. שם קובץ `<YYYY-MM-DD>-<slug>.md` עקבי עם יובל.
+- **Notes / Caveats:** תיק נושא מפורט נפתח ב-[[chen-agent]] — עדכוני חן ממשיכים שם, לא כאן.
+- **Related:** [[chen-agent]], [[claude-md]], [[yael-agent]], [[yuval-agent]]
 
 ### 2026-05-23 — הסוכן השני (יובל) הוגדר [shipped]
 - **What was done:** נוצר `.claude/agents/yuval.md` — sub-agent עם 4 כלים (`Read, Write, Bash, Glob`). Bash נדרש לקריאת OpenAI Images API דרך הסקיל [[gpt-image-gen-skill]]. Flow של 7 שלבים: סריקת `yuval/reference/` → חילוץ סגנון → ניסוח prompt באנגלית → קריאה לסקיל → שמירת sibling `.txt` → verification → דיווח. נוצרו `yuval/reference/.gitkeep` ו-`yuval/outputs/.gitkeep`. עודכן CLAUDE.md: בלוק ניתוב מורחב, section חדש "פייפליין: מאמר עם תמונות (יעל ↔ יובל)" עם 5 שלבים, ובלוק מבנה תיקיות מעודכן.

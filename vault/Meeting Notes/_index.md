@@ -17,6 +17,7 @@
 * \[\[project-file-mapping]] — מיפוי מלא של קבצי הפרויקט (סשן זה)
 * \[\[github-connection]] — חיבור Git ו-GitHub CLI: remote, safe.directory, מצב CLI
 * \[\[skill-creator-install]] — התקנת skill-creator@claude-plugins-official ב-project scope
+* \[\[chen-agent]] — סוכנת חוקרת הרשת: WebSearch/WebFetch, זיכרון חיפושים ב-chen/Memory/, פלט ל-Content/
 
 ## תיקיות נוספות בוולט
 
