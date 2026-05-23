@@ -13,3 +13,8 @@
 - [[skills-catalog]] — קטלוג כל ה-Skills ב-.claude/skills/ עם תיאור ומטרת כל אחד
 - [[project-file-mapping]] — מיפוי מלא של קבצי הפרויקט (סשן זה)
 - [[github-connection]] — חיבור Git ו-GitHub CLI: remote, safe.directory, מצב CLI
+
+## תיקיות נוספות בוולט
+
+- 📁 **[[vault/Project Map/_index|Project Map]]** — תיעוד פרטני של כל קובץ/תיקייה בפרויקט
+- 📁 **[[vault/Skills/_index|Skills]]** — תיעוד פרטני של כל 17 ה-Skills
