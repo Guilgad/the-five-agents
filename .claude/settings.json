@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo {\"hookSpecificOutput\":{\"hookEventName\":\"SessionStart\",\"additionalContext\":\"MANDATORY: This project uses the obsidian-vault-workflow skill. At the start of every session and before every task, you MUST invoke the obsidian-vault-workflow skill via the Skill tool. Read the vault topic file, recent Meeting Notes, and append a session log entry when the task is complete. This is non-negotiable.\"}}",
+            "shell": "bash",
+            "statusMessage": "Loading Obsidian vault protocol..."
+          }
+        ]
+      }
+    ]
+  }
+}
