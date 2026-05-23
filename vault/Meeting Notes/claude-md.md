@@ -17,3 +17,9 @@
 - **Decisions:** הקובץ מכיל תשתית בלבד — אין עדיין הוראות ניתוב ספציפיות.
 - **Notes / Caveats:** הקובץ מציין שהוא "ראשוני" ויתרחב; יש לעדכן תיק זה עם כל שינוי ב-CLAUDE.md.
 - **Related:** [[team-personas]], [[agents-directory]], [[project-file-mapping]]
+
+### 2026-05-23 — הוספת ניתוב יובל + section "פייפליין מאמר עם תמונות" [shipped]
+- **What was done:** עודכן `CLAUDE.md` בשלושה מקומות: (1) בלוק "ניתוב לסוכנים" — הוחלפה השורה `יובל — TODO` בבלוק מלא עם trigger keywords עברית+אנגלית (תמונה של/ציור של/תיצור תמונה/איור + image of/picture of/generate image/illustration/draw), קלט/פלט, תלות ב-`OPENAI_API_KEY` וב-[[gpt-image-gen-skill]]. (2) section חדש מתחת לבלוק הניתוב — "פייפליין: מאמר עם תמונות (יעל ↔ יובל)" עם 5 שלבים (a–e): יעל כותבת ומשאירה `{{IMAGE_NEEDED: ...}}` placeholders → ראובן מפעיל את יובל על כל placeholder → ראובן משלב את התמונות שחזרו לקבצי ה-MD/HTML של יעל → שומר ב-`Output/`. (3) בלוק "מבנה התיקיות" — הוספת השורה על `yuval/` (reference + outputs).
+- **Decisions:** הפייפליין מתועד ב-CLAUDE.md עצמו (ולא רק בקבצי הסוכנים) כי ראובן הוא המתאם בין הסוכנים — זה התפקיד שלו. הסוכנים עצמם לא יודעים אחד על השני; רק על הפורמט המשותף (placeholder).
+- **Notes / Caveats:** השאריות של "TODO" נשארות רק ל-חן עכשיו. כשחן תיווצר, תידרש פעימה דומה: עדכון הניתוב + תיק נושא + index.
+- **Related:** [[yuval-agent]], [[gpt-image-gen-skill]], [[yael-agent]], [[agents-directory]]

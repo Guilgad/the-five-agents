@@ -116,6 +116,17 @@
 
 ---
 
+## יכולות יצירת תוכן / מדיה
+
+### gpt-image-gen
+**קובץ:** `.claude/skills/gpt-image-gen/SKILL.md`
+**מתי להשתמש:** כשצריך לייצר תמונה (PNG) מ-prompt טקסטואלי. המעטפת הטכנית לקריאת OpenAI Images API עם המודל `gpt-image-2` (יצא 2026-04-21 — **אסור להחליף לדגם אחר**).
+**דורש:** `OPENAI_API_KEY` ב-`.env`. אופציונלי: `jq` + `base64` (Linux/Mac), אחרת Python 3 stdlib (Windows / Git Bash) כ-fallback.
+**שייך ל:** [[yuval-agent]] (הצרכן היחיד כרגע — היחיד עם Bash בצוות).
+**ראה:** [[gpt-image-gen-skill]] לתיק הנושא המלא.
+
+---
+
 ## יכולות Obsidian
 
 ### obsidian-bases
@@ -148,3 +159,9 @@
 - **Decisions:** Skills מחולקות ל"תהליך עבודה" ו"Obsidian" לנוחות ניווט.
 - **Notes / Caveats:** חלק מה-skills מכילים קבצי עזר רבים (systematic-debugging, brainstorming) — אלה הכי מורכבות.
 - **Related:** [[agents-directory]], [[commands-directory]], [[obsidian-config]], [[project-file-mapping]]
+
+### 2026-05-23 — הוספת gpt-image-gen (סקיל ראשון של יצירת מדיה) [shipped]
+- **What was done:** נוסף הסקיל [[gpt-image-gen-skill]] תחת section חדש "יכולות יצירת תוכן / מדיה". הסקיל הוא מעטפת ל-OpenAI Images API עם המודל הקבוע `gpt-image-2`, ומשמש את הסוכן יובל ([[yuval-agent]]).
+- **Decisions:** הוספת קטגוריה שלישית בקטלוג ("יצירת תוכן / מדיה") — אזור שיתרחב כשייכנסו עוד סקילים תפעוליים (לעומת תהליך/Obsidian שהם meta).
+- **Notes / Caveats:** הסקיל אומת ע"י הופעתו ברשימת ה-skills של Claude Code אחרי השמירה.
+- **Related:** [[gpt-image-gen-skill]], [[yuval-agent]], [[agents-directory]]
