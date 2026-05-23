@@ -1,0 +1,4 @@
+Clean flat illustration of an automated business workflow pipeline: connected flow diagram showing four steps with icons and arrows — a web form lead, then a CRM customer card, then a WhatsApp chat bubble, then a generated invoice document. Minimalist design, blue and teal color palette, modern tech icons, white background, professional infographic style, high detail.
+
+model: gpt-image-2 | size: 1024x1024 | quality: medium | date: 2026-05-23
+article: מאמר crm | placement: before "אוטומציות שאפשר לבנות עם CRM" section

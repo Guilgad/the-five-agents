@@ -1,0 +1,4 @@
+Split scene business illustration: left side shows a chaotic desk overwhelmed with yellow sticky notes, scattered papers, open notebooks, messy folders; right side shows a clean modern laptop displaying a neat CRM dashboard with customer profile cards, green sales metrics and organized data. Flat vector illustration style, warm orange tones on left, cool blue tones on right, professional business aesthetic, high detail.
+
+model: gpt-image-2 | size: 1024x1024 | quality: medium | date: 2026-05-23
+article: מאמר crm | placement: hero (top of article)
